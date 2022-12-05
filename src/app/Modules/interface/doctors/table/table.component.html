@@ -1,0 +1,94 @@
+
+<img [src]="url" alt="d">
+<!-- <img src="{{url}}" alt="d"> -->
+
+<input type="file" (change)="imageupload($event)" name="" id="">
+
+<button (click)="gettdoctor(x.value)">ok</button>
+<input #x type="number" name="" id="" placeholder="number">
+<label >name
+</label>
+<label For="doctor" >ss
+</label>
+<!-- 
+devam -->
+
+
+<form  [formGroup]="dgroup" (ngSubmit)="post(dgroup.value)">
+  <input type="number" name="" id="" formControlName="doctorId">
+  <input [ngModel]  type="text" name="" id="" formControlName="name">
+  <input [ngModel]  type="text" name="" id="" formControlName="gender">
+  <input [ngModel]  type="text" name="" id="" formControlName="address">
+  <input [ngModel]  type="text" name="" id="" formControlName="speciality">
+  <input [ngModel]  type="number" name="" id="" formControlName="tel">
+  <input  [ngModel] type="text" name="" id="" formControlName="email">
+  <input  [ngModel] type="text" name="" id="" formControlName="image">
+  <input [ngModel]  type="number" name="" id="" formControlName="experinece">
+
+  <button type="submit" >gönder</button>
+</form>
+
+<input #number type="number" name="" id="" placeholder="number">
+<button (click)="delete(number.value)">delete</button>
+
+
+<form  [formGroup]="dgroup" (ngSubmit)="put(z.value,dgroup.value)">
+  <input #z type="number" name="" id="" formControlName="doctorId">
+  <input [ngModel]  type="text" name="" id="" formControlName="name">
+  <input [ngModel]  type="text" name="" id="" formControlName="gender">
+  <input [ngModel]  type="text" name="" id="" formControlName="address">
+  <input [ngModel]  type="text" name="" id="" formControlName="speciality">
+  <input [ngModel]  type="number" name="" id="" formControlName="tel">
+  <input  [ngModel] type="text" name="" id="" formControlName="email">
+  <input  [ngModel] type="text" name="" id="" formControlName="image">
+  <input [ngModel]  type="number" name="" id="" formControlName="experinece">
+
+  <button type="submit">gönder</button>
+</form>
+
+<h1 >
+  {{ds.name}}
+</h1>
+<h1 >
+  {{ds.gender}},{{ds.email}}
+</h1>
+
+<p>Doctor Table</p>
+<table>
+  <thead>
+    <tr>
+      <th>ID
+      <th>NAME
+      <th>Gender
+      <th>Address
+      <th>Speciality
+      <th>Tel
+      <th>Email
+      <th>Experinece
+      <th>Alive
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of doctor">
+      <td >{{d.doctorId}}
+      <td>{{d.name}}
+      <td>{{d.gender}}
+      <td>{{d.address}}
+      <td>{{d.speciality}}
+      <td>{{d.tel}}
+      <td>{{d.email}}
+      <td>{{d.experinece}}
+      <td>Yes
+    </tr>
+    <tr class="disabled">
+      <td>3
+      <td>Hoban
+      <td>Washburn
+      <td>Wash
+      <td>M
+      <td>Pilot
+      <td>M
+      <td>Captain
+      <td>No
+    </tr>
+  </tbody>
+</table>

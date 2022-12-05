@@ -1,0 +1,114 @@
+<div class="col-xl-12">
+  <div class="ms-panel">
+    <div class="ms-panel-header  ms-panel-custome">
+      <h6>Doctors List</h6>
+      <a routerLink="/admin/doctors/add" class="ms-text-primary"><i class="fa fa-plus-circle ms-text-primary"
+          aria-hidden="true"></i>Add Doctor</a>
+      <a (click)="addDoctor()" class="ms-text-primary"><i class="fa fa-plus-circle ms-text-primary"
+          aria-hidden="true"></i>Add Doctor(Modal)</a>
+    </div>
+    <div class="ms-panel-body">
+      <div class="table-responsive">
+        <div id="data-table5_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="dataTables_length" id="data-table5_length"><label>Show <select name="data-table5_length"
+                    aria-controls="data-table5" class="custom-select custom-select-sm form-control form-control-sm">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option> {{filting}} </option>
+                  </select> </label></div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <app-search class="search" (eventChange)="filter($event)"></app-search>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <table id="data-table5" class="table table-hover" role="grid" aria-describedby="data-table5_info"
+                style="width: 889px;">
+                <thead class="thead-primary">
+                  <tr role="row">
+                    <th class="sorting_asc" tabindex="0" aria-controls="data-table5" rowspan="1" colspan="1"
+                      style="width: 27px;">#
+                    </th>
+                    <th class="sorting" tabindex="0" aria-controls="data-table5" rowspan="1" colspan="1"
+                      style="width: 129px;"> Name
+                    </th>
+                    <th class="sorting" tabindex="0" aria-controls="data-table5" rowspan="1" colspan="1"
+                      style="width: 129px;">
+                      Gender</th>
+                    <th class="sorting" tabindex="0" aria-controls="data-table5" rowspan="1" colspan="1"
+                      style="width: 129px;">
+                      Email</th>
+                    <th class="sorting" tabindex="0" aria-controls="data-table5" rowspan="1" colspan="1"
+                      style="width: 129px;">
+                      Address</th>
+                    <th class="sorting_asc" tabindex="0" aria-controls="data-table5" rowspan="1" colspan="1"
+                      aria-sort="ascending" style="width: 129px;"> speciality
+                    </th>
+                    <th class="sorting" tabindex="0" aria-controls="data-table5" rowspan="1" colspan="1"
+                      style="width: 129px;">
+                      experinece</th>
+                    <th class="sorting" tabindex="0" aria-controls="data-table5" rowspan="1" colspan="1"
+                      style="width: 129px;">
+                      Tel</th>
+                    <th class="sorting" tabindex="0" aria-controls="data-table5" rowspan="1" colspan="1"
+                      style="width: 129px;">Status</th>
+                    <th class="sorting" tabindex="0" aria-controls="data-table5" rowspan="2" colspan="2"
+                      style="width: 129px;">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let d of Imodel;let indexOfelement=index" role="row" class="odd">
+                    <td class="sorting_1">{{indexOfelement+1}} </td>
+                    <td><img [src]="getImageUrl(d.image)">SARA</td>
+                    <td>{{d.name}} </td>
+                    <td>{{d.gender}} </td>
+                    <td>{{d.email}} </td>
+                    <td>{{d.address}} </td>
+                    <td>{{d.speciality}} </td>
+                    <td>{{d.experinece}} </td>
+                    <td>{{d.tel}} </td>
+                    <td><span class="badge badge-outline-success">Active</span></td>
+                    <td>
+                      <a (click)="updateDoctor(d.id)"><i class="fa fa-edit text-primary" aria-hidden="true"></i></a>
+                      <a (click)="showDoctor(d.id)"><i class="fa fa-eye text-primary" aria-hidden="true"></i></a>
+                      <a (click)="onUpdateDoctor(d.id)"><i class="fa fa-pencil text-primary" aria-hidden="true"></i></a>
+                      <a (click)="deleteDoctor(d.id)"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a>
+                      <a>
+                        <app-upload (OnUpload)="uploadImage($event)"></app-upload>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-5">
+              <div class="dataTables_info" id="data-table5_info" role="status" aria-live="polite">Showing 1 to 10 of 14
+                entries</div>
+            </div>
+            <div class="col-sm-12 col-md-7">
+              <div class="dataTables_paginate paging_simple_numbers" id="data-table5_paginate">
+                <ul class="pagination has-gap">
+                  <li class="paginate_button page-item previous disabled" id="data-table5_previous"><a href="#"
+                      aria-controls="data-table5" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                  <li class="paginate_button page-item active"><a href="#" aria-controls="data-table5" data-dt-idx="1"
+                      tabindex="0" class="page-link">1</a></li>
+                  <li class="paginate_button page-item "><a href="#" aria-controls="data-table5" data-dt-idx="2"
+                      tabindex="0" class="page-link">2</a></li>
+                  <li class="paginate_button page-item next" id="data-table5_next"><a href="#"
+                      aria-controls="data-table5" data-dt-idx="3" tabindex="0" class="page-link">Next</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

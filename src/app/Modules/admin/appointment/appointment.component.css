@@ -1,0 +1,38 @@
+.booking-section .booking-box {
+    padding: 40px 40px;
+    padding-bottom: 40px;
+    width: 100%;
+}
+@media (max-width: 991px){
+.booking-box {
+    max-width: 100%;
+}
+.booking-box {
+    background: #fff !important;
+    padding: 20px 40px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+}
+.booking-box input {
+    border-radius: 30px;
+    border: 2px solid #009de1;
+    padding: 10px 15px;
+    height: 50px;
+    font-size: 12px;
+    color: #c3c3c3;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

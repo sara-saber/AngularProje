@@ -1,0 +1,242 @@
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.ms-profile-cover {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background-image:url(https://androthemes.com/themes/html/medjestic/assets/img/user-profile-bg-1920x400.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 87%;
+    width: 100%;
+    padding: 1.5rem;
+    padding-bottom: 0;
+    z-index: 1;
+}
+.ms-profile-overview {
+    position: relative;
+    height: 500px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 6px 1px rgb(69 65 78 / 10%);
+}
+.ms-profile-cover img {
+    width: 200px;
+    margin-bottom: -35px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+.nav-tabs li a {
+    display: block;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.ms-profile-user-info, .ms-profile-user-buttons {
+    padding: 0 0 1.5rem 1.5rem;
+}
+.text-white {
+    color: #fff!important;
+}
+h3 {
+    font-size: 30px;
+    font-weight: 500;
+}
+h6 {
+    font-size: 16px;
+}
+.ms-profile-user-buttons {
+    flex: 1 1 auto;
+    text-align: right;
+}
+.ms-profile-user-info, .ms-profile-user-buttons {
+    padding: 0 0 1.5rem 1.5rem;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn-light {
+    color: #fff;
+    background-color: #878793;
+    border-color: #878793;
+}
+.btn {
+    font-size: 14px;
+    outline: none;
+    padding: 0.625rem 1rem;
+    min-width: 120px;
+    margin-top: 1rem;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn-light {
+    color: #fff;
+    background-color: #878793;
+    border-color: #878793;
+}
+.btn {
+    font-size: 14px;
+    outline: none;
+    padding: 0.625rem 1rem;
+    min-width: 120px;
+    margin-top: 1rem;
+}
+.material-icons {
+    vertical-align: sub;
+    font-weight: 500;
+    font-size: 14px;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+.ms-profile-navigation {
+    position: absolute;
+    bottom: 0;
+    left: 250px;
+}
+.nav-tabs {
+    border: 0;
+}
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.ms-profile-navigation li {
+    flex: 0 0 auto;
+}
+.nav-tabs li {
+    flex: 1 1 auto;
+}
+.nav-tabs.tabs-bordered li a.active {
+    background: #fff;
+    color: #009efb;
+    border-bottom: 2px solid #009efb;
+}
+.ms-profile-navigation li a {
+    padding: 1rem;
+}
+.ms-profile-navigation li {
+    flex: 0 0 auto;
+}
+.ms-profile-navigation.tabs-bordered li a {
+    border-bottom: 0;
+    color: #878793;
+}
+.tab-content>.active {
+    display: block;
+}
+.tab-content>.tab-pane {
+    display: none;
+}
+/* new component*/
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.ms-panel-body, .ms-panel-footer {
+    position: relative;
+    padding: 1.5rem;
+}
+.col-md-12,.col-md-12
+{
+    position:relative;
+    width:100%;
+    min-height:1px;
+    padding-right:15px;
+    padding-left:15px;
+}
+.col-xl-7{
+    -ms-flex:0 0 58.333333%;
+    flex:0 0 58.333333%;
+    max-width:58.333333%;
+}
+
+.ms-panel {
+    background-color: #fff;
+    box-shadow: 0 1px 6px 1px rgb(69 65 78 / 10%);
+    margin-bottom: 30px;
+}
+ .col-xl-5 {
+    -ms-flex:0 0 41.666667%;
+    flex:0 0 41.666667%;
+    max-width:41.666667%;
+}
+@media (max-width: 1024px){
+.ms-panel.ms-panel-fh {
+    height: auto;
+}}
+.ms-panel {
+    /* background: rgba(68, 70, 79, 0.5); */
+    background-color: #fff;
+    box-shadow: 0 1px 6px 1px rgb(69 65 78 / 10%);
+    margin-bottom: 30px;
+}
+.ms-panel-body, .ms-panel-footer {
+    position: relative;
+    padding: 1.5rem;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+th {
+    text-align: inherit;
+}
+.ms-profile-information tr td {
+    text-align: right;
+}
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}

@@ -1,0 +1,117 @@
+.ms-panel {
+    background-color: #fff;
+    box-shadow: 0 1px 6px 1px rgb(69 65 78 / 10%);
+    margin-bottom: 30px;
+}
+.ms-panel-body{
+    position: relative;
+    padding: 1.5rem;
+}
+p {
+
+    transition: 0.3s;
+    color: #ffffff;
+    font-size: 14px;
+}
+h6 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.ms-auth-form {
+    display: block;
+}
+
+.ms-auth-form {
+    position: relative;
+    width: 440px;
+    margin-top: 15px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+     border-radius: 30px; 
+    background-color: #033563;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+.ms-content-wrapper.ms-auth .ms-auth-col h1 {
+    font-size: 24px;
+}
+.btn-primary {
+    color: #033563;
+    background-color: #98baf4;
+    border-color: #009efb;
+}
+h1 {
+    font-size: 60px;
+    font-weight: 500;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+.input-group {
+    margin-bottom: 1rem;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+}
+.form-control {
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ms-auth-bg {
+    position: relative;
+    height: 100%;
+    background-image: url(../../../assets/img/1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.ms-auth-col {
+    flex: 1 1 auto;
+    height: 100vh;
+    width: 2px;
+}
+.ms-auth-container {
+    display: flex;
+}
+@media (max-width: 1024px){
+.ms-content-wrapper.ms-auth {
+    min-height: 100vh;
+}}
+.ms-content-wrapper.ms-auth {
+    padding: 0;
+
+    height: 100vh;
+}
+.ms-auth-form .btn-social-login {
+    background-color: #f6f6f6;
+}
+.ms-auth-form .btn-social-login img {
+    width: 20px;
+    margin-right: 15px;
+}
+

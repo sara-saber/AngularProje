@@ -1,0 +1,18 @@
+.navbar {
+    border-radius: 0;
+    background: #009efb;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 0 30px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #009efb;
+    border-color: #009efb;
+}
+.ms-inline li.ms-nav-item {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1.1rem 15px;
+}
+

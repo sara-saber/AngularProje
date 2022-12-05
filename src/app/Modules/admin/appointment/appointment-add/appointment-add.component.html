@@ -1,0 +1,71 @@
+<div class="booking-box">
+    <h2>Book an Appointment</h2>
+    <form role="form" id="contactForm" class="contact-form" data-toggle="validator" data-gtm-form-interact-id="0">
+        <div class="alert alert-danger display-error" style="display: none"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Departments</label>
+                    <select class="form-control form-select glowing-border department"
+                        aria-label="Default select example" (change)="selectDepartment($event)" id="Idepartment"
+                        data-gtm-form-interact-field-id="0">
+                        <option selected="">Select department</option>
+                        <option *ngFor="let d of Idepartment" [value]="d.id">{{d.name}} </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>DOCTOR</label>
+                    <select  class="form-control form-select glowing-border" aria-label="Default select example"
+                        id="doctors1" data-gtm-form-interact-field-id="1">
+                        <option value="0">Select doctors</option>
+                        <option *ngFor="let doctor of Idoctor">{{doctor.name}} </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>NAME</label>
+                    <input type="text" class="form-control glowing-border" placeholder="Your Name" id="name1">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>MOBILE</label>
+                    <input type="text" class="form-control glowing-border" placeholder="+971" id="mobile1">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 date-time">
+                <label class="labeltext">GENDER</label><br>
+                <div class="form-check-inline">
+                    <label class="customradio"><span class="radiotextsty">Male</span>
+                        <input type="radio" checked="checked" name="gender" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="customradio"><span class="radiotextsty">Female</span>
+                        <input type="radio" name="gender" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="filters">
+                    <div>
+                        <label for="filter-date">DATE AND TIME</label>
+                        <input type="text" value="" class="form-control" id="datetimepicker_mask1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary submit-btn w180px gd-bg appoinment2" id="submit"
+                    type="submit">Submit</button>
+            </div>
+        </div>
+        <b id="flash_div1" style="color:#4caf50;font-size:20px"></b>
+    </form>
+</div>

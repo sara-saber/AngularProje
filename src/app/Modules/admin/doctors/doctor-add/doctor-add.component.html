@@ -1,0 +1,204 @@
+<div class="col-xl-12 col-md-12">
+    <div class="ms-panel">
+        <div class="ms-panel-header ms-panel-custome">
+            <h6> {{pageTitle}} </h6>
+            <!-- <button (click)="openDialog()">open Dialog</button>
+          -->
+            <h6>Add Doctors</h6>
+            <a [routerLink]="['doctors/list']" class="ms-text-primary">Doctors List</a>
+        </div>
+        <div class="ms-panel-body">
+            <form [formGroup]="addForm" class="needs-validation was-validated" novalidate="">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom0001">Doctor Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" formControlName="name"
+                                placeholder="Enter First Name" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom0003">gender Address</label>
+                        <div class="form-check">
+                            <input value="Male" formControlName="gender" type="radio" class="form-check-input"
+                                id="validationFormCheck2" name="radio-stacked" required>
+                            <label class="form-check-label" for="validationFormCheck2">Male</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input value="Female" formControlName="gender" type="radio" class="form-check-input"
+                                id="validationFormCheck3" name="radio-stacked" required>
+                            <label class="form-check-label" for="validationFormCheck3">Female</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom0003">Email Address</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" formControlName="email" placeholder="Enter Email"
+                                required="">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom0004">Number Phone</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" formControlName="tel"
+                                placeholder="Enter Number Phone" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3"> <label for="validationCustom0002">Address</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" formControlName="address"
+                                placeholder="Enter your address" required="">
+
+                        </div>
+                    </div>
+                    <app-upload  (OnUpload)="uploadImage($event)"></app-upload>
+                    <div class="col-md-6 mb-3">
+                        <label for="formFile" class="form-label">Upload image</label>
+                       <!-- <input formControlName="image" class="form-control" type="file" id="formFile" required=""> -->
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom0005">Experinece</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" formControlName="experinece"
+                                placeholder="Enter Designation" required="">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="validationCustom6">Speciality</label>
+                        <div class="input-group">
+                            <select class="form-control" formControlName="speciality" required="">
+                                <option value="1">Neurology</option>
+                                <option value="2">Gynaecology</option>
+                                <option value="3">Microbiology</option>
+                                <option value="4">Pharmacy</option>
+                                <option value="5">Neonatal</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-4 d-inline w-20" (click)="save()" type="submit">Submit</button>
+            </form>
+            <!-- <button [disabled]="!addForm.valid" class="btn btn-primary mt-4 d-inline w-20" (click)="save()" type="submit">Submit</button>
+   -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>doctor-add works!</p>
+
+
+<img [src]="url" alt="d">
+<img src="{{url}}" alt="d"> 
+
+<input type="file" (change)="imageupload($event)" name="" id="">
+
+<button (click)="gettdoctor(x.value)">ok</button>
+<input #x type="number" name="" id="" placeholder="number">
+<label>name
+</label>
+<label For="doctor">ss
+</label> -->
+<!-- 
+devam -->
+
+
+<!-- <form [formGroup]="dgroup" (ngSubmit)="post(dgroup.value)">
+    <input type="number" name="" id="" formControlName="doctorId">
+    <input [ngModel] type="text" name="" id="" formControlName="name">
+    <input [ngModel] type="text" name="" id="" formControlName="gender">
+    <input [ngModel] type="text" name="" id="" formControlName="address">
+    <input [ngModel] type="text" name="" id="" formControlName="speciality">
+    <input [ngModel] type="number" name="" id="" formControlName="tel">
+    <input [ngModel] type="text" name="" id="" formControlName="email">
+    <input [ngModel] type="text" name="" id="" formControlName="image">
+    <input [ngModel] type="number" name="" id="" formControlName="experinece">
+
+    <button type="submit">gönder</button>
+</form> -->
+<!-- 
+<input #number type="number" name="" id="" placeholder="number">
+<button (click)="delete(number.value)">delete</button>
+
+
+<form [formGroup]="dgroup" (ngSubmit)="put(z.value,dgroup.value)">
+    <input #z type="number" name="" id="" formControlName="doctorId">
+    <input [ngModel] type="text" name="" id="" formControlName="name">
+    <input [ngModel] type="text" name="" id="" formControlName="gender">
+    <input [ngModel] type="text" name="" id="" formControlName="address">
+    <input [ngModel] type="text" name="" id="" formControlName="speciality">
+    <input [ngModel] type="number" name="" id="" formControlName="tel">
+    <input [ngModel] type="text" name="" id="" formControlName="email">
+    <input [ngModel] type="text" name="" id="" formControlName="image">
+    <input [ngModel] type="number" name="" id="" formControlName="experinece">
+
+    <button type="submit">gönder</button>
+</form>
+
+<h1>
+    {{ds.name}}
+</h1>
+<h1>
+    {{ds.gender}},{{ds.email}}
+</h1>
+
+<p>Doctor Table</p>
+<table>
+    <thead>
+        <tr>
+            <th>ID
+            <th>NAME
+            <th>Gender
+            <th>Address
+            <th>Speciality
+            <th>Tel
+            <th>Email
+            <th>Experinece
+            <th>Alive
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of doctors">
+            <td>{{d.doctorId}}
+            <td>{{d.name}}
+            <td>{{d.gender}}
+            <td>{{d.address}}
+            <td>{{d.speciality}}
+            <td>{{d.tel}}
+            <td>{{d.email}}
+            <td>{{d.experinece}}
+            <td>Yes
+        </tr>
+        <tr class="disabled">
+            <td>3
+            <td>Hoban
+            <td>Washburn
+            <td>Wash
+            <td>M
+            <td>Pilot
+            <td>M
+            <td>Captain
+            <td>No
+        </tr>
+    </tbody>
+</table> -->
